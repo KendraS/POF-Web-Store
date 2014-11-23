@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
-
+gem 'carrierwave'
 
 
 # Use ActiveModel has_secure_password
