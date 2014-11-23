@@ -1,5 +1,9 @@
 <h2>Search Results For '<%= params[:search_keywords] %>'</h2>
 
+<% if @results_of_keyword_search.empty? %>
+	<p>No results found.</p>
+<% end if %>
+
 <%= render partial: 'products/product',
 		   collection: @results_of_keyword_search %>
 

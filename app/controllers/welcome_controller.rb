@@ -46,15 +46,15 @@ class WelcomeController < ApplicationController
 		@products = Product.where(category_id: "3")
 	end
 
-
+	# Displays a search form.
 	def search
 
 	end
 
-
+	# Displays search results view.
 	def search_results
-		keywords = params[:search_keywords]
-		@results_of_keyword_search = Product.where(product_name: keywords)
+		#@results_of_keyword_search = Product.where("product_name LIKE ? OR product_description LIKE ?", keywords, keywords)
+		@results_of_keyword_search = Product.keyword_search(params[:search_keywords])
 	end
 
 
