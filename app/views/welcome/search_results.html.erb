@@ -1,0 +1,5 @@
+<h2>Search Results For '<%= params[:search_keywords] %>'</h2>
+
+<%= render partial: 'products/product',
+		   collection: @results_of_keyword_search %>
+

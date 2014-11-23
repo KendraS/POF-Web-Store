@@ -4,7 +4,17 @@ Rails.application.routes.draw do
   
   root to: 'welcome#index'
 
+  get 'about' => 'welcome#about'
+  get 'ingredients' => 'welcome#ingredients'
+  get 'products' => 'products#index'
+  get 'contact' => 'welcome#contact'
 
+  get 'dry_food' => 'welcome#dry_food'
+  get 'wet_food' => 'welcome#wet_food'
+  get 'biscuits_and_treats' => 'welcome#biscuits_and_treats'
+
+  get 'search' => 'welcome#search', as: 'search'
+  get 'search_results' => 'welcome#search_results', as: 'search_results'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

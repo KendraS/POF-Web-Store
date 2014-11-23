@@ -1,0 +1,13 @@
+Controller: products
+   
+   rails g controller products
+
+actions:
+
+   index - show all products - view: app/views/products/index.html.erb
+
+Model: Product
+
+  name:
+  description:
+  price:  

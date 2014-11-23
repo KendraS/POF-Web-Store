@@ -4,11 +4,12 @@
 	</div>
 	<nav>
 		<ul>
-			<li>Home</li>
-			<li>About</li>
-			<li>Ingredients</li>
-			<li>Products</li>
-			<li>Contact</li>
+			<li><%= link_to 'Search', search_path %></li>
+			<li><%= link_to 'Home', root_path %></li>
+			<li><%= link_to 'About', about_path %></li>
+			<li><%= link_to 'Ingredients', ingredients_path %></li>
+			<li><%= link_to 'Products', products_path %></li>
+			<li><%= link_to 'Contact', contact_path %></li>
 		</ul>
 	</nav>
 </header>
