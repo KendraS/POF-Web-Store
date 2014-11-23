@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 	def index
-		@page_title = 'Petsonix Organic Food'
+		@page_title = 'Nourishing your pet from the inside out'
 	end
 	# The @products variable will now be accessible from the
 	# automatically loaded view: app/views/products/index.html.erb

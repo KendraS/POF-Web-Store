@@ -19,6 +19,10 @@
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 body {
 	font-size: 11pt;
 }
@@ -37,15 +41,15 @@ header {
 .logo {
 	font-family: 'Lobster Two', cursive;
 	font-style: italic;
-	font-size: 32pt;
+	font-size: 34pt;
 	font-weight: 400;
-	color: #FFF;
 	float: left;
+	margin-top: 11px;
 	margin-right: 100px;
 }
 
-.logo p {
-	margin-top: 11px;
+.logo a {
+	color: #FFF;
 }
 
 header nav {
@@ -63,7 +67,6 @@ header nav li {
 
 header nav a {
 	text-transform: uppercase;
-	text-decoration: none;
 	color: #FFF;
 	padding: 20px;
 	cursor: pointer;
@@ -71,4 +74,9 @@ header nav a {
 
 h1 {
 	clear: both;
+	font-family: 'Lobster Two', cursive;
+	font-style: italic;
+	font-size: 32pt;
+	font-weight: 400;
+	color: #FF8006;
 }
