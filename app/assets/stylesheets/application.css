@@ -21,13 +21,15 @@
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 body {
 	font-size: 11pt;
 }
 
-.header_wrapper {
+.header_wrapper,
+.main_wrapper {
 	width: 90%;
 	margin: 0 auto;
 }
@@ -69,7 +71,6 @@ header nav a {
 	text-transform: uppercase;
 	color: #FFF;
 	padding: 20px;
-	cursor: pointer;
 }
 
 h1 {
@@ -79,4 +80,8 @@ h1 {
 	font-size: 32pt;
 	font-weight: 400;
 	color: #FF8006;
+}
+
+.product {
+	width: 320px;
 }

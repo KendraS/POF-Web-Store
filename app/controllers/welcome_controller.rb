@@ -5,23 +5,6 @@ class WelcomeController < ApplicationController
 	# The @products variable will now be accessible from the
 	# automatically loaded view: app/views/products/index.html.erb
 
-	def about
-		@page_title = 'About'
-		#@products = Product.where(category_id: "1")
-	end
-
-
-	def ingredients
-		@page_title = 'Ingredients'
-		#@products = Product.where(category_id: "1")
-	end
-
-
-	# def products
-	# 	@page_title = 'All Products'
-	# 	@products = Product.all
-	# end
-
 
 	def contact
 		@page_title = 'Contact'

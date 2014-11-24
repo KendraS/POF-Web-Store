@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  get 'ingredients/index'
+
+  get 'about/index'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
   root to: 'welcome#index'
 
-  get 'about' => 'welcome#about'
-  get 'ingredients' => 'welcome#ingredients'
+  get 'about' => 'about#index'
+  get 'ingredients' => 'ingredients#index'
   get 'products' => 'products#index'
   get 'contact' => 'welcome#contact'
 
