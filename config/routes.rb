@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   root to: 'welcome#index'
 
-  get 'about' => 'about#index'
+  get 'about' => 'abouts#index'
   get 'ingredients' => 'ingredients#index'
   get 'products' => 'products#index'
   get 'contact' => 'welcome#contact'
