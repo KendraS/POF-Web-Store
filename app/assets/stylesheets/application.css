@@ -22,9 +22,11 @@
 a {
 	text-decoration: none;
 	cursor: pointer;
+	outline: 0;
 }
 
 body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 11pt;
 }
 
@@ -80,8 +82,4 @@ h1 {
 	font-size: 32pt;
 	font-weight: 400;
 	color: #FF8006;
-}
-
-.product {
-	width: 320px;
 }

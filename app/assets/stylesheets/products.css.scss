@@ -2,12 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$font-stack: source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-$blue: #64C1ED;
+$font-stack: Helvetica Neue, Helvetica, Arial, sans-serif;
 $green: #789827;
 $beige: #997420;
 $orange: #FF8006;
+$white: #FFFFFF;
+$light-grey: #D9D9D9;
 
-body {
-	font: 100% $font-stack;
+h2 {
+	color: $orange;
+	text-transform: uppercase;
+	font: {
+    	family: $font-stack;
+    	size: 16pt;
+    	weight: bold;
+  	}
+}
+
+.product {
+	width: 320px;
+	background-color: $white;
+	border: 1px solid $light_grey;
+	margin-bottom: 15px;
 }

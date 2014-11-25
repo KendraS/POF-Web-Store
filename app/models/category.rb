@@ -3,4 +3,8 @@ class Category < ActiveRecord::Base
 
 	validates :category_name, :category_description, presence: true
 
+	def name
+		self.category_name
+	end
+
 end

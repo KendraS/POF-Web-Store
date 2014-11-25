@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 	# Carrierwave
-	#mount_uplaoder :image, ImageUploader
+	mount_uploader :image, ImageUploader
 
 	belongs_to :category
 	
