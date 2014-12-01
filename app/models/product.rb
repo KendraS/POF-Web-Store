@@ -14,4 +14,5 @@ class Product < ActiveRecord::Base
 		keywords = "%" + keywords + "%"
 		Product.where("product_name LIKE ? OR product_description LIKE ?", keywords, keywords)
 	end
+
 end

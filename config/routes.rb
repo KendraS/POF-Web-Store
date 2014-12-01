@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   root to: 'welcome#index'
 
   # Maps HTTP verbs to controller actions automatically
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'about' => 'abouts#index'
   get 'ingredients' => 'ingredients#index'
   get 'add_to_cart' => 'products#index'
-  get 'contact' => 'welcome#contact'
+  get 'contact' => 'contacts#index'
 
   # CATEGORIES
   get 'dry_food' => 'welcome#dry_food'
