@@ -3,9 +3,14 @@
 		<div class="logo">
 			<p><%= link_to 'Petsonix Organic Food', root_path %></p>
 		</div>
+		<p>
+			<%= form_tag search_results_path, method: :get do %>
+				<%= text_field_tag :search_keywords %>
+				<%= submit_tag "SEARCH" %>
+			<% end %>
+		</p>
 		<nav>
 			<ul>
-				<li><%= link_to 'Search', search_path %></li>
 				<li><%= link_to 'Home', root_path %></li>
 				<li><%= link_to 'About', about_path %></li>
 				<li><%= link_to 'Ingredients', ingredients_path %></li>

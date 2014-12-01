@@ -1,78 +1,34 @@
 Rails.application.routes.draw do
-  get 'ingredients/index'
-
-  get 'about/index'
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
   
   root to: 'welcome#index'
 
+  # Maps HTTP verbs to controller actions automatically
+  resources :products, only: [:index, :show]
+  resources :categories
+  
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  # WELCOME PAGE
   get 'about' => 'abouts#index'
   get 'ingredients' => 'ingredients#index'
-  get 'products' => 'products#index'
+  get 'add_to_cart' => 'products#index'
   get 'contact' => 'welcome#contact'
 
+  # CATEGORIES
   get 'dry_food' => 'welcome#dry_food'
   get 'wet_food' => 'welcome#wet_food'
   get 'biscuits_and_treats' => 'welcome#biscuits_and_treats'
+  get 'accessories' => 'welcome#accessories'
 
-  get 'search' => 'welcome#search', as: 'search'
+  # SEARCH RESULTS
   get 'search_results' => 'welcome#search_results', as: 'search_results'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end

@@ -2,8 +2,9 @@
 	<h2><%= product.product_name %></h2>
 	<p><strong>Category:</strong> <%= product.category.category_name %></p>
 	<p><strong>Description:</strong> <%= product.product_description %></p>
-	<p><strong>Price:</strong> <%= product.retail_price %></p>
+	<p><strong>Price:</strong> <%= number_to_currency product.retail_price %></p>
 	<% if product.image.present? %>
 		<%= image_tag product.image %>
 	<% end %>
+	<p><%= link_to 'Add To Cart', add_to_cart_path %></p>
 </div>
