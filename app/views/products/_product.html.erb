@@ -1,5 +1,7 @@
 <div class="product">
-	<h2><%= product.product_name %></h2>
+	<h2>
+		<%= link_to product.product_name, product %>
+	</h2>
 	<p><strong>Category:</strong> <%= product.category.category_name %></p>
 	<p><strong>Description:</strong> <%= product.product_description %></p>
 	<p><strong>Price:</strong> <%= number_to_currency product.retail_price %></p>

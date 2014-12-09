@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   # WELCOME PAGE
   get 'about' => 'abouts#index'
   get 'ingredients' => 'ingredients#index'
-  get 'add_to_cart' => 'products#index'
   get 'contact' => 'contacts#index'
+  get 'add_to_cart' => 'products#index'
 
   # CATEGORIES
   get 'dry_food' => 'welcome#dry_food'
@@ -23,12 +23,5 @@ Rails.application.routes.draw do
 
   # SEARCH RESULTS
   get 'search_results' => 'welcome#search_results', as: 'search_results'
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
 
 end
