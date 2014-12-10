@@ -1,3 +1,9 @@
-<div class="banner">
+<div id="banner">
+	<%= image_tag("banner.jpg") %>
+</div>
 
+<div class="container">
+	<h1><%= @page_title %></h1>
+	<%= render @products %>
+	<p class="all_products"><%= link_to "See All Products", products_path %></p>
 </div>

@@ -1,16 +1,10 @@
 class WelcomeController < ApplicationController
 	def index
 		@page_title = 'Nourishing your pet from the inside out'
+		@products = Product.all.limit(3).distinct 
 	end
 	# The @products variable will now be accessible from the
 	# automatically loaded view: app/views/products/index.html.erb
-
-
-	def contact
-		@page_title = 'Contact'
-		#@products = Product.where(category_id: "1")
-	end
-
 
 	def dry_food
 		@page_title = 'Dry Food'

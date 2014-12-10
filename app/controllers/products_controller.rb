@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @page_title = 'All Products'
-    @products = Product.order("product_name").page(params[:page]).per(5)  
+    @products = Product.all.order('product_name').page(params[:page]).per(6)
   end
 
   # Get individual product
@@ -9,5 +9,10 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
+
+  # def name
+  #    self.product_name
+  # end
+
 
 end

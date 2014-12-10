@@ -1,6 +1,4 @@
-<div class="contact_content">
-	<% if about.title1.present? %>
-		<h2><%= about.title1 %></h2>
-		<p><%= about.content1 %></p><br />
-	<% end %>
-</div>
+<p class="label"><%= contact.name %></p><p><%= text_field(:post, :name) %></p>
+<p class="label"><%= contact.email %></p><p><%= text_field(:post, :email) %></p>
+<p class="label"><%= contact.message %></p><p><%= text_area(:post, :message, :rows => 15) %></p>
+<p><%= submit_tag "send" %></p>

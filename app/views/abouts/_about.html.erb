@@ -1,21 +1,19 @@
-<div class="about_content">
-	<div class="left">
-		<% if about.title1.present? %>
-			<h2><%= about.title1 %></h2>
-			<p><%= about.content1 %></p><br />
-		<% end %>
+<div class="left">
+	<% if about.title1.present? %>
+		<h2><%= about.title1 %></h2>
+		<p><%= about.content1 %></p><br />
+	<% end %>
 
-		<% if about.title2.present? %>
-			<h2><%= about.title2 %></h2>
-			<p><%= about.content2 %></p><br />
-		<% end %>
-			
-		<% if about.title3.present? %>
-			<h2><%= about.title3 %></h2>
-			<p><%= about.content3 %></p>
-		<% end %>
-	</div>
-	<div class="right">
-		<%= image_tag "pic_about.jpg" %>
-	</div>
+	<% if about.title2.present? %>
+		<h2><%= about.title2 %></h2>
+		<p><%= about.content2 %></p><br />
+	<% end %>
+		
+	<% if about.title3.present? %>
+		<h2><%= about.title3 %></h2>
+		<p><%= about.content3 %></p>
+	<% end %>
+</div>
+<div class="right">
+	<%= image_tag "pic_about.jpg" %>
 </div>

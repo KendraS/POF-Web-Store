@@ -2,11 +2,11 @@
 	<h2>
 		<%= link_to product.product_name, product %>
 	</h2>
+	<p class="add_to"><%= link_to "Add to Cart", add_to_cart_path %></p>
 	<p><strong>Category:</strong> <%= product.category.category_name %></p>
 	<p><strong>Description:</strong> <%= product.product_description %></p>
 	<p><strong>Price:</strong> <%= number_to_currency product.retail_price %></p>
 	<% if product.image.present? %>
 		<%= image_tag product.image %>
 	<% end %>
-	<p><%= link_to 'Add To Cart', add_to_cart_path %></p>
 </div>
